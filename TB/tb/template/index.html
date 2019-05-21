@@ -1,0 +1,42 @@
+{% load staticfiles%}
+<html>
+   <head>
+     <title>
+       Tuberculosis Detection
+     </title>
+   </head>
+   <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+   <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="{% static '/js/script.js' %}" type="text/javascript"></script>
+   <body >
+      <h1 style="color:cornflowerblue">Tuberculosis Detection</h1>
+      <form method = "POST" action="report" enctype="multipart/form-data">
+        <div  style="position: relative">
+            <table style="padding: 15px" align = "center">
+              <tr>
+                <td><input class="text-field-1" id="name" name="name" type="text" placeholder="Name" required>
+                <input class="text-field-2" id="age" name="age" type="text" maxlength="2" size="4" placeholder="Age" required></td><br>
+              </tr>
+              <tr align="center" style="font-size: small">
+                <td><input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> Other<br></td>
+              </tr>
+            </table>
+        </div>
+        <div class="file-upload">
+            {% csrf_token %}
+            <input id="upload" class="file-upload__input" type="file" name="myfile">
+            <label for="upload" class="file-upload__label" > Upload X-Ray Image</label>
+            <input type="submit" class="file-upload__input" name="myfile"/><br>
+            <button class="browse-btn" onclick="getImage()">
+              <b>Submit</b>
+            </button>
+        </div>
+      </from>
+   </body>
+   <footer>
+     <br><br><br><h4>Made with <i class="fa fa-heart" style="color:crimson"></i></h4>
+   </footer>
+</html>

@@ -1,0 +1,110 @@
+
+      /*****************************************
+  upload button styles
+******************************************/
+.file-upload {
+  position: relative;
+  display: inline-block;
+
+}
+
+.file-upload__label 
+{
+  display: block;
+  padding: 1em 2em;
+  color: rgb(0, 0, 0);
+  background: rgba(134, 227, 255, 0.877);
+  border-radius: .4em;
+  transition: background .3s;
+  
+}
+    
+.file-upload__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1;
+    width:0;
+    height: 100%;
+    opacity: 0;
+}
+
+/*****************************************
+ design styles
+******************************************/
+html {
+   font-family: 'helvetica neue', 'arial', sans-serif;
+   font-size: 20px;
+   font-weight: bold;
+   padding-top: 5em;
+   -webkit-font-smoothing: antialiased;
+   text-align: center;
+   background: whitesmoke;
+} 
+
+body{
+  box-sizing:border-box;
+}
+.container{
+  display:flex;
+  background-color: #f5f5f5;
+  height:100vh;
+  width:100%;
+}
+.img-block{
+  display:flex;
+  flex:7;
+  justify-content: center;
+  
+}
+.img-wrap{
+  align-self: center;
+  width:60%;
+  max-width: 400px;
+  height:auto;
+/*   background-color: white; */
+}
+
+img{
+  width:100%;
+  height:100%;
+}
+.caption{
+  display:flex;
+  flex:5;
+  justify-content: flex-start;
+  align-self:center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.browse-btn{
+  background-color: coral;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.text-field-1{
+  width: 220px;
+  height: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius:5px; 
+  font-size: 20px;
+  font-weight: bold;
+  text-emphasis-color: inherit;
+  color: brown;
+}
+
+.text-field-2{
+  width: 80px;
+  height: 50px;
+  border-radius:5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-emphasis-color: inherit;
+  color: brown;
+}
